@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote</title>
+</head>
+<body>
+
+    <h1>This is an Random Quote Generator</h1>
+    <p id="quote"></p>
+
+    <button onclick="generateQuote()">Generate Quote</button>
+
+
+<script>
+
+    //  Generate an Array of Quotes which will be randomly genrated using Javascript
+
+    var quotes = [
+"The only way to do great work is to love what you do. – Steve Jobs",
+    "Innovation distinguishes between a leader and a follower. – Steve Jobs",
+    "Stay hungry, stay foolish. – Steve Jobs",
+    "Life is what happens when you're busy making other plans. – John Lennon",
+    "The future belongs to those who believe in the beauty of their dreams. – Eleanor Roosevelt",
+    "You miss 100% of the shots you don't take. – Wayne Gretzky",
+    "The only limit to our realization of tomorrow will be our doubts of today. – Franklin D. Roosevelt",
+    "It always seems impossible until it's done. – Nelson Mandela",
+    "Success is not final, failure is not fatal: It is the courage to continue that counts. – Winston Churchill",
+    "In the end, it's not the years in your life that count. It's the life in your years. – Abraham Lincoln"
+    ];
+
+
+    function generateQuote() {
+
+        let randomNumber = Math.floor(Math.random() * quotes.length);
+        let quoteElement = document.getElementById('quote');
+
+        quoteElement.textContent = quotes[randomNumber];
+    }
+
+
+
+
+</script>
+    
+    
+</body>
+</html>
